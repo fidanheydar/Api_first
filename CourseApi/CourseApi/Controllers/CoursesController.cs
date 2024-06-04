@@ -48,11 +48,11 @@ namespace CourseApi.Controllers
         }
 
         [HttpPost("")]
-        public ActionResult Create(CourseCreateDto courseDto)
+        public ActionResult Create(CourseCreateDto courseCreateDto)
         {
             Course course = new Course
             {
-                Name = courseDto.Name
+                Name = courseCreateDto.Name
             };
 
             _context.Courses.Add(course);
